@@ -4,6 +4,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/ramiroaraujo/.oh-my-zsh"
 
+ZSH_DISABLE_COMPFIX=true
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -68,8 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-#plugins=(fasd composer common-aliases git gitfast git-extras history tmux vi-mode history-substring-search laravel5)
-plugins=(fasd composer common-aliases git gitfast git-extras history tmux vi-mode history-substring-search laravel5)
+plugins=(fasd docker composer common-aliases git history tmux vi-mode history-substring-search laravel5 artisan)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -78,7 +79,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -102,6 +103,12 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export N_PREFIX=$HOME/n
 
-export PATH="/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/mysql@5.7/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/mysql@5.7/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$N_PREFIX/bin:$PATH"
+
+# pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 

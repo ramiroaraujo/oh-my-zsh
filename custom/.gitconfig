@@ -143,7 +143,7 @@
 [core]
 	autocrlf = false
   editor = vim
-	excludesfile = /Users/araujor/.gitignore_global
+	excludesfile = /Users/ramiroaraujo/.gitignore_global
 [advice]
   statusHints = false
 [diff]
@@ -159,4 +159,9 @@
   path = .gitconfig.user
 [user]
 	name = Ramiro Araujo
-	email = ramiro.araujo@hogarthww.com
+	email = rama.araujo@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

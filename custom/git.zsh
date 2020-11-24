@@ -1,6 +1,20 @@
 #fix pager
 export LESS="$LESS -FRXK"
 
+alias gd='git diff --ignore-space-at-eol -b -w --ignore-blank-lines'
+alias gd1='gd HEAD~1..HEAD'
+alias gd2='gd HEAD~2..HEAD'
+alias gd3='gd HEAD~3..HEAD'
+alias gd4='gd HEAD~4..HEAD'
+alias gd5='gd HEAD~5..HEAD'
+alias gd6='gd HEAD~6..HEAD'
+alias gd7='gd HEAD~7..HEAD'
+alias gd8='gd HEAD~8..HEAD'
+alias gd9='gd HEAD~9..HEAD'
+
+alias cdr='cd $(git rev-parse --show-cdup)'
+alias gi='vim $(git rev-parse --show-toplevel)/.gitignore'
+
 # Git Aliases
 alias cdr='cd $(git rev-parse --show-cdup)'
 alias gs='git status'
@@ -74,6 +88,7 @@ function gpb () {
         branch=$1
     fi
     git checkout "$branch"
+    git pull
     git merge ${current} --no-ff --no-edit
     git push
     git checkout ${current}
