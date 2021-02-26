@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(fasd docker composer common-aliases git history tmux vi-mode history-substring-search laravel5 artisan)
+plugins=(fasd docker composer common-aliases git history tmux vi-mode history-substring-search laravel5 artisan zsh-better-npm-completion)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,6 +106,7 @@ export EDITOR='vim'
 export N_PREFIX=$HOME/n
 
 export PATH="/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/mysql@5.7/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$N_PREFIX/bin:$PATH"
+export PATH="/usr/local/opt/php@7.4/bin:$PATH"
 
 # pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
